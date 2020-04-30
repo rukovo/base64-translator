@@ -6,7 +6,9 @@ Written in python.
 A simple program for encoding and decoding base64 text.
 No need to select the text from the terminal and copy it, the program copies the output into your clipboard.
 
-Pyperclip might need to be installed, which can be done via pip: 'pip install pyperclip'
+Pyperclip might need to be installed, which can be done via pip: `pip install pyperclip`
+
+Included is a clean version and also the version I personally use. You can see what the differences are.
 
 ## Example Output
 ```

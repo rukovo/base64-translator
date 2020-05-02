@@ -16,13 +16,13 @@ while answer.lower() == "y":
     code = input('> ')
     if code.lower() == 'e':
         print('Enter your data to encode:')
-        shit = input()
+        shit = input('> ')
         s2 = str(base64.b64encode(shit.encode('ascii')))
         s2 = s2[2:-1]
         answer = print_copy_ask()
     else:
         print('Enter your fuckin shit')
-        shit = input()
+        shit = input('> ')
         s2 = base64.b64decode(shit).decode('ascii')
         answer = print_copy_ask()
 else:

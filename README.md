@@ -16,14 +16,14 @@ Included is a clean version and also the version I personally use. You can see w
 Would you like to encode or decode? (e/d)
 > e
 Enter your data to encode:
-This is a test encode for github
+> This is a test encode for github
 VGhpcyBpcyBhIHRlc3QgZW5jb2RlIGZvciBnaXRodWI=
 Would you like to do more? (y/n)
 > y
 Would you like to encode or decode? (e/d)
 > d
 Enter your data to decode:
-VGhpcyBpcyBhIHRlc3QgZW5jb2RlIGZvciBnaXRodWI=
+> VGhpcyBpcyBhIHRlc3QgZW5jb2RlIGZvciBnaXRodWI=
 This is a test encode for github
 Would you like to do more? (y/n)
 > n

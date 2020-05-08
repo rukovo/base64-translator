@@ -18,14 +18,18 @@ Would you like to encode or decode? (e/d)
 Enter your data to encode:
 > This is a test encode for github
 VGhpcyBpcyBhIHRlc3QgZW5jb2RlIGZvciBnaXRodWI=
+
 Would you like to do more? (y/n)
 > y
-Would you like to encode or decode? (e/d)
-> d
-Enter your data to decode:
-> VGhpcyBpcyBhIHRlc3QgZW5jb2RlIGZvciBnaXRodWI=
-This is a test encode for github
-Would you like to do more? (y/n)
-> n
+Would you like to encode or decode? (e/d) 
+ > d
+Enter your data to decode: 
+ > QSBzdXJwcmlzZSB0byBiZSBzdXJlIGJ1dCBhIHdlbGNvbWUgb25lLg==
+Here's your data: 
+A surprise to be sure but a welcome one.
+
+Would you like to do more? (y/n) 
+ > n
 Goodbye
+
 ```

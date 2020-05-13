@@ -24,7 +24,7 @@ def list_title(width):
 
 answer = 'y'
 while answer.lower() == "y":
-    user_input = input('Enter your data')
+    user_input = input('Enter your data:\n > ')
     user_list = user_input.split('|')
     user_data = user_list[0].strip()
     user_args = user_list[1].replace(' ', '')

@@ -8,23 +8,32 @@ No need to select the text from the terminal and copy it, the program copies the
 
 Pyperclip will need to be installed, which can be done via pip: `pip install pyperclip`
 
-Included is a clean version and also the version I personally use. You can see what the differences are.
+The clean version is a vestige of previous versions containing profanity, however I will keep it up for any future interest.
+
+## Options
+
+In order to use this program you have to input your data and then, at the end, add an "|" followed by your options. Your options are as follows:
+
+`-e` - encode data
+
+`-d` - decode data
+
+`-sn` - save under new title
+
+`-sa` - save an append to txt doc
 
 ## Example Output
 ```
 
-Would you like to encode or decode? (e/d)
-> e
-Enter your data to encode:
-> This is a test encode for github
-VGhpcyBpcyBhIHRlc3QgZW5jb2RlIGZvciBnaXRodWI=
+Enter your data:
+ > This is a test encode for github | -e
+Here's your data:
+VGhpcyBpcyBteSB0ZXN0IGVuY29kZSBmb3IgZ2l0aHVi
 
-Would you like to do more? (y/n)
-> y
-Would you like to encode or decode? (e/d) 
- > d
-Enter your data to decode: 
- > QSBzdXJwcmlzZSB0byBiZSBzdXJlIGJ1dCBhIHdlbGNvbWUgb25lLg==
+Would you like to do more? (y/n) 
+ > y
+Enter your data:
+ > QSBzdXJwcmlzZSB0byBiZSBzdXJlIGJ1dCBhIHdlbGNvbWUgb25lLg== | -d
 Here's your data: 
 A surprise to be sure but a welcome one.
 

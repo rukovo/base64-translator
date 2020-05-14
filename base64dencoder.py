@@ -23,7 +23,7 @@ while answer.lower() == 'y':
     if 'd' in user_args:
         s2 = base64.b64decode(user_data).decode('ascii')
     if 'sn' in user_args:
-        list = open('list.txt', 'a')
+        list = open('link_list.txt', 'a')
         title = input('What would you like the title to be?\n > ')
         title = title.title()
         title = title.center(50, '-')

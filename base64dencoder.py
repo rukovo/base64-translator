@@ -1,33 +1,21 @@
-#! /usr/bin/env python3
+#! /usr/local/bin/python3
 
-import base64
-import pyperclip
-import time
 import os
+import time
+import pyperclip
+import base64
 
-abspath = os.path.abspath(__file__)
+abspath = os.path(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
-link_list = 'link_list.txt'
-arguments = {'decode': '-d',
-             'encode': '-e', 'save new': '-sn',
-             'save append': '-sa',
-             'decode twice': '-dd'}
-
-
-def list_title(width):
-    link_title = input('What do you want the title to be?\n > ')
-    link_title = link_title.title()
-    title_title = link_title.center(width, '-')
-    return title_title
-
 
 answer = 'y'
-while answer.lower() == "y":
-    user_input = input('Enter your data:\n > ')
-    user_list = user_input.split('|')
-    user_data = user_list[0].strip()
-    user_args = user_list[1].replace(' ', '')
+while answer.lower() == 'y':
+    user_input = input("Enter you're data\n > ")
+    user_input = user_input.split('|')
+    user_data = user_input[0].strip()
+    user_args = user_input[1]
+    user_args = user_args.replace(' ', '')
     user_args = user_args.split('-')
     if 'e' in user_args:
         s2 = str(base64.b64encode(user_data.encode('ascii')))
@@ -35,17 +23,17 @@ while answer.lower() == "y":
     if 'd' in user_args:
         s2 = base64.b64decode(user_data).decode('ascii')
     if 'sn' in user_args:
-        open_list = open(link_list, 'a')
-        title_title = list_title(40)
-        open_list.write('\n' + title_title + '\n' + s2 + '\n')
-        open_list.close()
+        list = open('list.txt', 'a')
+        title = input('What would you like the title to be?\n > ')
+        title = title.title()
+        title = title.center(50, '-')
+        list.append('\n' + title + '\n' + s2 + '\n')
     if 'sa' in user_args:
-        open_list = open(link_list, 'a')
-        open_list.write(s2 + '\n')
-        open_list.close()
+        list = open('list.txt', 'a')
+        list.append(s2 + '\n')
+    print(s2)
     pyperclip.copy(s2)
-    print(f"\n Here's your data:\n{s2}\n")
-    answer = input('Would you like to do more? (y/n) \n > ')
+    answer = input('Would you like to do more?\n > ')
 else:
-    print("Goodbye")
+    print('Goodbye')
     time.sleep(.5)

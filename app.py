@@ -1,21 +1,17 @@
-#! /usr/local/bin/python3
-
 import os
 import time
-import pyperclip
 import base64
+import pyperclip
 
-abspath = os.path(__file__)
-dname = os.path.dirname(abspath)
-os.chdir(dname)
+abspath = os.path.dirname(os.path.abspath(__file__))
+os.chdir(abspath)
 
 answer = 'y'
 while answer.lower() == 'y':
     user_input = input("Enter you're data\n > ")
     user_input = user_input.split('|')
     user_data = user_input[0].strip()
-    user_args = user_input[1]
-    user_args = user_args.replace(' ', '')
+    user_args = user_input[1].replace(' ', '')
     user_args = user_args.split('-')
     if 'e' in user_args:
         s2 = str(base64.b64encode(user_data.encode('ascii')))
